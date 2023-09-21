@@ -17,13 +17,42 @@
         </h3>
         <article class="flex gap-6">
           <nav class="flex gap-9 text-sm font-[600]">
-            <a href="">CLOTHING</a>
-            <a href="">FOOTWEAR</a>
-            <a href="">HARDWARE</a>
-            <a href="">ACCESSORIES</a>
-            <a class="text-[red]" href="">SALE</a>
-            <a href="">MY ACCOUNT</a>
-            <a href="">CART<span class="text-[red]">(5)</span></a>
+            <a href="" class="relative group hover:text-white"
+              >CLOTHING<span
+                class="absolute -left-1 -bottom-[1px] w-[110%] h-[2px] rounded-sm bg-[red] -z-10 group-hover:h-full group-hover:transition-all"
+              ></span
+            ></a>
+            <a href="" class="relative group"
+              >FOOTWEAR<span
+                class="absolute -left-1 -bottom-[1px] group-hover:w-[110%] h-[2px] rounded-sm bg-[red] -z-10 group-hover:transition-all"
+              ></span
+            ></a>
+            <a href="" class="relative group"
+              >HARDWARE<span
+                class="absolute -left-1 -bottom-[1px] group-hover:w-[110%] h-[2px] rounded-sm bg-[red] -z-10 group-hover:transition-all"
+              ></span
+            ></a>
+            <a href="" class="relative group"
+              >ACCESSORIES<span
+                class="absolute -left-1 -bottom-[1px] group-hover:w-[110%] h-[2px] rounded-sm bg-[red] -z-10 group-hover:transition-all"
+              ></span
+            ></a>
+            <a class="text-[red] relative group" href=""
+              >SALE<span
+                class="absolute -left-[2px] -bottom-[1px] group-hover:w-[110%] h-[2px] rounded-sm bg-[black] -z-10 group-hover:transition-all"
+              ></span
+            ></a>
+            <a href="" class="relative group"
+              >MY ACCOUNT<span
+                class="absolute -left-1 -bottom-[1px] group-hover:w-[110%] h-[2px] rounded-sm bg-[red] -z-10 group-hover:transition-all"
+              ></span
+            ></a>
+            <a href="" class="relative group"
+              >CART<span class="text-[red]">(5)</span
+              ><span
+                class="absolute -left-1 -bottom-[1px] group-hover:w-[110%] h-[2px] rounded-sm bg-[red] -z-10 group-hover:transition-all"
+              ></span
+            ></a>
           </nav>
           <div class="bg-[red] w-[2px]"></div>
           <div>
@@ -33,7 +62,7 @@
               viewBox="0 0 24 24"
               stroke-width="1.8"
               stroke="currentColor"
-              class="w-4 h-5"
+              class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-100 w-4 h-5"
             >
               <path
                 stroke-linecap="round"
@@ -65,7 +94,11 @@
           </article>
         </figure>
         <figure class="flex absolute left-[14.85rem]">
-          <img class="z-10" src="img/main-heading-shoe-2.png" alt="" />
+          <img
+            class="z-10 png-shadow"
+            src="img/main-heading-shoe-2.png"
+            alt=""
+          />
           <div class="absolute right-[5.3rem] top-[80px]">
             <p class="text-5xl font-bold text-[#dcdcdc]">2015</p>
           </div>
@@ -92,31 +125,31 @@
           </svg>
         </div>
         <figure id="blue-shoe" class="">
-          <img class="w-[200px]" src="img/blue-shoe.png" alt="" />
+          <img class="w-[200px] png-shadow" src="img/blue-shoe.png" alt="" />
           <p class="font-[700] text-[18px] leading-5 pl-[15px]">
             Blue White<br /><samp class="text-[red]">€54.95</samp>
           </p>
         </figure>
         <figure id="yellow-shoe" class="">
-          <img class="w-[200px]" src="img/yellow-shoe.png" alt="" />
+          <img class="w-[200px] png-shadow" src="img/yellow-shoe.png" alt="" />
           <p class="font-[700] text-[18px] leading-5 pl-[15px]">
             Blue White<br /><samp class="text-[red]">€54.95</samp>
           </p>
         </figure>
         <figure id="black-shoe" class="">
-          <img class="w-[200px]" src="img/black-shoe.png" alt="" />
+          <img class="w-[200px] png-shadow" src="img/black-shoe.png" alt="" />
           <p class="font-[700] text-[18px] leading-5 pl-[15px]">
             Blue White<br /><samp class="text-[red]">€54.95</samp>
           </p>
         </figure>
         <figure id="red-shoe" class="">
-          <img class="w-[200px]" src="img/red-shoe.png" alt="" />
+          <img class="w-[200px] png-shadow" src="img/red-shoe.png" alt="" />
           <p class="font-[700] text-[18px] leading-5 pl-[15px]">
             Burgundy<br /><samp class="text-[red]">€54.95</samp>
           </p>
         </figure>
         <figure id="white-shoe" class="">
-          <img class="w-[200px]" src="img/white-shoe.png" alt="" />
+          <img class="w-[200px] png-shadow" src="img/white-shoe.png" alt="" />
           <p class="font-[700] text-[18px] leading-5 pl-[15px]">
             Light Grey Black<br /><samp class="text-[red]">€54.95</samp>
           </p>
@@ -141,9 +174,12 @@
     </header>
     <main class="">
       <section id="place-made-in" class="mt-[100px] mb-[350px] relative">
-        <article
-          class="bg-[url('/img/skate-riding.jpg')] bg-cover bg-center h-[600px]"
-        >
+        <article class="h-[600px]">
+          <img
+            class="absolute z-[-1] h-[600px] w-[100%] object-cover"
+            src="img/skate-riding.jpg"
+            alt=""
+          />
           <figure class="bg-[#ff0000be] h-[100%] flex items-center flex-col">
             <h2 class="text-[white] font-[800] text-[50px] mt-9">
               Made In Emerica
@@ -177,28 +213,57 @@
         <article
           class="shadow-2xl w-[70%] h-[400px] absolute top-[490px] right-[14%] left-[14%] bg-[white] flex items-center justify-around"
         >
-        <figure id="the-pic" class="bg-[url('/img/playing-guitar.jpg')] bg-cover bg-center w-[40%] h-[97.4%]"></figure>
-        <figure id="diteals" class="w-[56%] h-[97.4%] flex flex-col justify-around p-6">
-            <h2 class="text-5xl">Andrew<br><span class="font-bold">Reynolds</span></h2>
-            <p class="text-sm">Andrew is a true skateboarding. He's one of the most well-know and respected pros ever, a tried and true lifer who never fails to deliver the most technical tricks the biggest way with total style.</p>
-            <button class="border-solid border-2 border-[red] p-1 w-[30%] text-[red] font-[600]">READ MORE</button>
-        </figure>
+          <figure id="the-pic" class="w-[40%] h-[97.4%]">
+            <img
+              class="h-[100%] object-cover w-[100%]"
+              src="img/playing-guitar.jpg"
+              alt=""
+            />
+          </figure>
+          <figure
+            id="diteals"
+            class="w-[56%] h-[97.4%] flex flex-col justify-around p-6"
+          >
+            <h2 class="text-5xl">
+              Andrew<br /><span class="font-bold">Reynolds</span>
+            </h2>
+            <p class="text-sm">
+              Andrew is a true skateboarding. He's one of the most well-know and
+              respected pros ever, a tried and true lifer who never fails to
+              deliver the most technical tricks the biggest way with total
+              style.
+            </p>
+            <button
+              class="border-solid border-2 border-[red] p-1 w-[30%] text-[red] font-[600]"
+            >
+              READ MORE
+            </button>
+          </figure>
         </article>
       </section>
-      <section id="shoe-features" class="mx-[5rem] flex flex-col gap-16 relative">
+      <section
+        id="shoe-features"
+        class="mx-[5rem] flex flex-col gap-16 relative"
+      >
         <figure class="flex gap-6 w-[440px]">
-            <h3 class="text-[red] font-[600] text-5xl">01</h3>
-            <p class="font-[600] text-4xl">One-piece toe panel to avoid blowouts in Ollie area.</p>
+          <h3 class="text-[red] font-[600] text-5xl">01</h3>
+          <p class="font-[600] text-4xl">
+            One-piece toe panel to avoid blowouts in Ollie area.
+          </p>
         </figure>
         <figure class="flex gap-6 w-[440px] text-gray-400 self-end">
-            <h3 class="font-[600] text-5xl">01</h3>
-            <p class="font-[600] text-4xl">One-piece toe panel to avoid blowouts in Ollie area.</p>
+          <h3 class="font-[600] text-5xl">01</h3>
+          <p class="font-[600] text-4xl">
+            One-piece toe panel to avoid blowouts in Ollie area.
+          </p>
         </figure>
         <figure class="flex gap-6 w-[440px] text-gray-400">
-            <h3 class="font-[600] text-5xl">01</h3>
-            <p class="font-[600] text-4xl">One-piece toe panel to avoid blowouts in Ollie area.</p>
+          <h3 class="font-[600] text-5xl">01</h3>
+          <p class="font-[600] text-4xl">
+            One-piece toe panel to avoid blowouts in Ollie area.
+          </p>
         </figure>
-        <img class="w-[300px] absolute right-[25.6rem]" src="img/big-shoe.png" alt="">
+        <img class="absolute right-[22.9rem]" src="img/big-shoe.png" alt="" />
       </section>
     </main>
     <footer class="h-16"></footer>
