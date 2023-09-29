@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WILD SKATE</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/index.js" defer></script>
   </head>
   <body>
     <header class="">
@@ -19,16 +20,20 @@
           <span class="pr-[5px]"></span>Skate
         </h3>
         <article
-          class="flex flex-row-reverse items-center md:flex-row gap-2 sm:gap-6"
+          class="flex flex-row-reverse items-center lg:flex-row gap-2 sm:gap-6"
         >
-          <div>
+          <div
+            id="bar-open"
+            class="hover:bg-[red] group rounded-full transition-all p-1"
+            onclick="openCloseNav()"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="2.5"
               stroke="currentColor"
-              class="w-6 h-6 lg:hidden"
+              class="w-6 h-6 lg:hidden group-hover:text-white"
             >
               <path
                 stroke-linecap="round"
@@ -37,6 +42,24 @@
               />
             </svg>
           </div>
+          <nav
+            id="for-phone"
+            class="hidden flex-col items-center gap-3 sm:gap-9 text-sm font-[600] lg:hidden absolute top-[56.9px] z-20 w-[60%] sm:w-[70%] bg-[red] py-4"
+          >
+            <a id="phone-link" href="" class="px-[30%] text-[red] bg-white"
+              >CLOTHING</a
+            >
+            <a id="phone-link" href="" class="px-[30%] text-white">FOOTWEAR</a>
+            <a id="phone-link" href="" class="px-[30%] text-white">HARDWARE</a>
+            <a id="phone-link" href="" class="px-[30%] text-white"
+              >ACCESSORIES</a
+            >
+            <a id="phone-link" class="px-[30%] text-white" href="">SALE</a>
+            <a id="phone-link" href="" class="px-[30%] text-white"
+              >MY ACCOUNT</a
+            >
+            <a id="phone-link" href="" class="px-[30%] text-white">CART</a>
+          </nav>
           <nav
             class="lg:flex flex-col sm:flex-row items-center gap-3 sm:gap-9 text-sm font-[600] hidden"
           >
@@ -100,18 +123,20 @@
         <article
           class="flex flex-col-reverse lg:flex-row items-center lg:mt-[150px] w-[830px] relative"
         >
-          <figure class="w-[457.4px]">
+          <figure class="px-3 w-[90%] sm:w-[457.4px]">
             <h3 class="text-yellow-300 text-2xl">Emerica.</h3>
-            <h1 class="text-7xl font-bold">The Reynolds</h1>
+            <h1 class="text-5xl sm:text-7xl font-bold">The Reynolds</h1>
             <h3 class="text-1xl font-bold text-right pr-[10px] mt-[-7px]">
               LOW VULC
             </h3>
             <article
               id="shop-now-btn"
-              class="bg-[red] w-[198px] flex justify-around p-[2px] text-sm font-bold text-white mt-[20px]"
+              class="bg-[red] w-[198px] flex justify-around text-sm font-bold text-white mt-[20px] hover:bg-white group transition-all border-2 border-[red]"
             >
-              <button class="pl-[2px]">SHOP NOW</button>
-              <button class="bg-white text-[red] px-[15px] mr-[-13px] py-[3px]">
+              <button class="pl-[2px] group-hover:text-[red]">SHOP NOW</button>
+              <button
+                class="bg-white text-[red] px-[15px] mr-[-13.5px] py-[3px] group-hover:text-white group-hover:bg-[red]"
+              >
                 €54.95
               </button>
             </article>
@@ -132,7 +157,7 @@
         id="shoes-galarry"
         class="flex mt-10 sm:mt-[150px] items-center justify-around"
       >
-        <div>
+        <div class="hover:bg-[#a2a2a27a] rounded-full transition-all">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -148,37 +173,57 @@
             />
           </svg>
         </div>
-        <figure id="blue-shoe" class="hidden md:block">
-          <img class="w-[200px] png-shadow" src="img/blue-shoe.png" alt="" />
+        <figure id="blue-shoe" class="group hidden md:block">
+          <img
+            class="w-[200px] png-shadow group-hover:-scale-x-100 transition-all"
+            src="img/blue-shoe.png"
+            alt=""
+          />
           <p class="font-[700] text-[18px] leading-5 pl-[15px]">
             Blue White<br /><samp class="text-[red]">€54.95</samp>
           </p>
         </figure>
-        <figure id="yellow-shoe" class="hidden md:block">
-          <img class="w-[200px] png-shadow" src="img/yellow-shoe.png" alt="" />
+        <figure id="yellow-shoe" class="group hidden md:block">
+          <img
+            class="w-[200px] png-shadow group-hover:-scale-x-100 transition-all"
+            src="img/yellow-shoe.png"
+            alt=""
+          />
           <p class="font-[700] text-[18px] leading-5 pl-[15px]">
             Blue White<br /><samp class="text-[red]">€54.95</samp>
           </p>
         </figure>
-        <figure id="black-shoe" class="hidden sm:block">
-          <img class="w-[200px] png-shadow" src="img/black-shoe.png" alt="" />
+        <figure id="black-shoe" class="group hidden sm:block">
+          <img
+            class="w-[200px] png-shadow group-hover:-scale-x-100 transition-all"
+            src="img/black-shoe.png"
+            alt=""
+          />
           <p class="font-[700] text-[18px] leading-5 pl-[15px]">
             Blue White<br /><samp class="text-[red]">€54.95</samp>
           </p>
         </figure>
-        <figure id="red-shoe" class="">
-          <img class="w-[200px] png-shadow" src="img/red-shoe.png" alt="" />
+        <figure id="red-shoe" class="group">
+          <img
+            class="w-[200px] png-shadow group-hover:-scale-x-100 transition-all"
+            src="img/red-shoe.png"
+            alt=""
+          />
           <p class="font-[700] text-[18px] leading-5 pl-[15px]">
             Burgundy<br /><samp class="text-[red]">€54.95</samp>
           </p>
         </figure>
-        <figure id="white-shoe" class="">
-          <img class="w-[200px] png-shadow" src="img/white-shoe.png" alt="" />
+        <figure id="white-shoe" class="group">
+          <img
+            class="w-[200px] png-shadow group-hover:-scale-x-100 transition-all"
+            src="img/white-shoe.png"
+            alt=""
+          />
           <p class="font-[700] text-[18px] leading-5 pl-[15px]">
             Light Grey Black<br /><samp class="text-[red]">€54.95</samp>
           </p>
         </figure>
-        <div>
+        <div class="hover:bg-[#a2a2a27a] rounded-full transition-all">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -208,18 +253,21 @@
             alt=""
           />
           <figure class="bg-[#ff0000be] h-[100%] flex items-center flex-col">
-            <h2 class="text-[white] font-[800] text-[50px] mt-9">
+            <h2 class="text-[white] font-[800] text-3xl sm:text-[50px] mt-9">
               Made In Emerica
             </h2>
             <p class="text-[white] font-[400] mb-9">WATCH THE VIDEO</p>
-            <div id="play-vidoe">
+            <div
+              id="play-vidoe"
+              class="hover:bg-white mb-9 rounded-full group transition-all"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="0.5"
                 stroke="currentColor"
-                class="w-[50px] h-[50px] text-[white] mb-9"
+                class="w-[50px] h-[50px] text-[white] group-hover:text-[red]"
               >
                 <path
                   stroke-linecap="round"
@@ -242,7 +290,7 @@
         >
           <figure id="the-pic" class="w-[40%] h-[97.4%]">
             <img
-              class="h-[100%] object-cover w-[100%]"
+              class="h-[100%] object-cover hover:object-contain transition-all w-[100%]"
               src="img/playing-guitar.jpg"
               alt=""
             />
@@ -251,7 +299,7 @@
             id="diteals"
             class="w-[56%] h-[97.4%] flex flex-col justify-around p-6"
           >
-            <h2 class="text-5xl">
+            <h2 class="text-3xl sm:text-5xl">
               Andrew<br /><span class="font-bold">Reynolds</span>
             </h2>
             <p class="text-sm">
@@ -260,11 +308,16 @@
               deliver the most technical tricks the biggest way with total
               style.
             </p>
-            <button
-              class="border-solid border-2 border-[red] p-1 w-[110px] text-[red] font-[600]"
-            >
-              READ MORE
-            </button>
+            <div class="relative group">
+              <button
+                class="border-solid border-2 border-[red] p-1 w-[110px] text-[black] font-[600]"
+              >
+                READ MORE
+              </button>
+              <span
+                class="absolute left-0 bottom-[0] w-0 group-hover:w-[110px] h-[100%] rounded-sm bg-[#ffa60075] transition-all"
+              ></span>
+            </div>
           </figure>
         </article>
       </section>
@@ -272,27 +325,27 @@
         id="shoe-features"
         class="mx-[5rem] flex flex-col gap-16 relative"
       >
-        <figure class="flex gap-6 w-[440px]">
+        <figure class="flex gap-6 sm:w-[440px]">
           <h3 class="text-[red] font-[600] text-5xl">01</h3>
-          <p class="font-[600] text-4xl">
+          <p class="font-[600] text-2xl sm:text-4xl">
             One-piece toe panel to avoid blowouts in Ollie area.
           </p>
         </figure>
-        <figure class="flex gap-6 w-[440px] text-gray-400 self-end">
+        <figure class="flex gap-6 sm:w-[440px] text-gray-400 self-end">
           <h3 class="font-[600] text-5xl">02</h3>
-          <p class="font-[600] text-4xl">
+          <p class="font-[600] text-2xl sm:text-4xl">
             Thin tongue and collar for a slimmer, low profile fit and more
             comfort.
           </p>
         </figure>
-        <figure class="flex gap-6 w-[440px] text-gray-300">
+        <figure class="flex gap-6 sm:w-[440px] text-gray-300">
           <h3 class="font-[600] text-5xl">03</h3>
-          <p class="font-[600] text-4xl">
+          <p class="font-[600] text-2xl sm:text-4xl">
             Full-length Ortholite footbed for comfort.
           </p>
         </figure>
         <img
-          class="absolute -translate-x-1/2 left-1/2 opacity-[0.6] lg:opacity-[0.8] xl:opacity-100"
+          class="absolute -translate-x-1/2 left-1/2 opacity-[0.6] lg:opacity-[0.8] xl:opacity-100 bottom-0"
           src="img/big-shoe-2.png"
           alt=""
         />
