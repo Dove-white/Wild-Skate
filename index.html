@@ -8,53 +8,76 @@
   </head>
   <body>
     <header class="">
-      <section id="nav-section" class="flex items-center justify-around">
+      <section
+        id="nav-section"
+        class="flex items-center justify-between px-7 sm:px-12 lg:justify-around"
+      >
         <h3
-          class="bg-[red] pt-[60px] pr-[30px] pb-[1px] leading-[0.65] text-white text-[22px] font-[800]"
+          class="bg-[red] hover:pt-[30px] hover:pb-[31px] transition-all pt-[60px] hover:pr-[15px] hover:pl-[15px] pr-[30px] pb-[1px] leading-[0.65] text-white text-[22px] font-[800] cursor-pointer"
         >
           Wild <br />
           <span class="pr-[5px]"></span>Skate
         </h3>
-        <article class="flex gap-6">
-          <nav class="flex gap-9 text-sm font-[600]">
-            <a href="" class="relative group hover:text-white"
+        <article
+          class="flex flex-row-reverse items-center md:flex-row gap-2 sm:gap-6"
+        >
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2.5"
+              stroke="currentColor"
+              class="w-6 h-6 lg:hidden"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
+              />
+            </svg>
+          </div>
+          <nav
+            class="lg:flex flex-col sm:flex-row items-center gap-3 sm:gap-9 text-sm font-[600] hidden"
+          >
+            <a href="" class="relative group hover:text-black text-white"
               >CLOTHING<span
-                class="absolute -left-1 -bottom-[1px] w-[110%] h-[2px] rounded-sm bg-[red] -z-10 group-hover:h-full group-hover:transition-all"
+                class="absolute -left-1 -bottom-[1px] w-[110%] group-hover:h-[2px] rounded-sm bg-[red] -z-10 h-full group-hover:transition-all"
               ></span
             ></a>
             <a href="" class="relative group"
               >FOOTWEAR<span
-                class="absolute -left-1 -bottom-[1px] group-hover:w-[110%] h-[2px] rounded-sm bg-[red] -z-10 group-hover:transition-all"
+                class="absolute -left-1 -bottom-[1px] w-0 group-hover:w-[110%] h-[2px] rounded-sm bg-[red] -z-10 group-hover:transition-all"
               ></span
             ></a>
             <a href="" class="relative group"
               >HARDWARE<span
-                class="absolute -left-1 -bottom-[1px] group-hover:w-[110%] h-[2px] rounded-sm bg-[red] -z-10 group-hover:transition-all"
+                class="absolute -left-1 -bottom-[1px] w-0 group-hover:w-[110%] h-[2px] rounded-sm bg-[red] -z-10 group-hover:transition-all"
               ></span
             ></a>
             <a href="" class="relative group"
               >ACCESSORIES<span
-                class="absolute -left-1 -bottom-[1px] group-hover:w-[110%] h-[2px] rounded-sm bg-[red] -z-10 group-hover:transition-all"
+                class="absolute -left-1 -bottom-[1px] w-0 group-hover:w-[110%] h-[2px] rounded-sm bg-[red] -z-10 group-hover:transition-all"
               ></span
             ></a>
             <a class="text-[red] relative group" href=""
               >SALE<span
-                class="absolute -left-[2px] -bottom-[1px] group-hover:w-[110%] h-[2px] rounded-sm bg-[black] -z-10 group-hover:transition-all"
+                class="absolute -left-[2px] -bottom-[1px] w-0 group-hover:w-[110%] h-[2px] rounded-sm bg-[black] -z-10 group-hover:transition-all"
               ></span
             ></a>
             <a href="" class="relative group"
               >MY ACCOUNT<span
-                class="absolute -left-1 -bottom-[1px] group-hover:w-[110%] h-[2px] rounded-sm bg-[red] -z-10 group-hover:transition-all"
+                class="absolute -left-1 -bottom-[1px] w-0 group-hover:w-[110%] h-[2px] rounded-sm bg-[red] -z-10 group-hover:transition-all"
               ></span
             ></a>
             <a href="" class="relative group"
               >CART<span class="text-[red]">(5)</span
               ><span
-                class="absolute -left-1 -bottom-[1px] group-hover:w-[110%] h-[2px] rounded-sm bg-[red] -z-10 group-hover:transition-all"
+                class="absolute -left-1 -bottom-[1px] w-0 group-hover:w-[110%] h-[2px] rounded-sm bg-[red] -z-10 group-hover:transition-all"
               ></span
             ></a>
           </nav>
-          <div class="bg-[red] w-[2px]"></div>
+          <div class="bg-[red] w-[2px] lg:h-6"></div>
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +97,9 @@
         </article>
       </section>
       <section id="main-heading" class="flex justify-center">
-        <article class="flex items-center mt-[150px] w-[830px] relative">
+        <article
+          class="flex flex-col-reverse lg:flex-row items-center lg:mt-[150px] w-[830px] relative"
+        >
           <figure class="w-[457.4px]">
             <h3 class="text-yellow-300 text-2xl">Emerica.</h3>
             <h1 class="text-7xl font-bold">The Reynolds</h1>
@@ -91,7 +116,7 @@
               </button>
             </article>
           </figure>
-          <figure class="flex absolute right-0">
+          <figure class="flex lg:absolute right-0">
             <img
               class="z-10 png-shadow"
               src="img/main-heading-shoe-2.png"
@@ -105,7 +130,7 @@
       </section>
       <section
         id="shoes-galarry"
-        class="flex mt-[150px] items-center justify-around"
+        class="flex mt-10 sm:mt-[150px] items-center justify-around"
       >
         <div>
           <svg
@@ -123,19 +148,19 @@
             />
           </svg>
         </div>
-        <figure id="blue-shoe" class="">
+        <figure id="blue-shoe" class="hidden md:block">
           <img class="w-[200px] png-shadow" src="img/blue-shoe.png" alt="" />
           <p class="font-[700] text-[18px] leading-5 pl-[15px]">
             Blue White<br /><samp class="text-[red]">€54.95</samp>
           </p>
         </figure>
-        <figure id="yellow-shoe" class="">
+        <figure id="yellow-shoe" class="hidden md:block">
           <img class="w-[200px] png-shadow" src="img/yellow-shoe.png" alt="" />
           <p class="font-[700] text-[18px] leading-5 pl-[15px]">
             Blue White<br /><samp class="text-[red]">€54.95</samp>
           </p>
         </figure>
-        <figure id="black-shoe" class="">
+        <figure id="black-shoe" class="hidden sm:block">
           <img class="w-[200px] png-shadow" src="img/black-shoe.png" alt="" />
           <p class="font-[700] text-[18px] leading-5 pl-[15px]">
             Blue White<br /><samp class="text-[red]">€54.95</samp>
@@ -172,8 +197,11 @@
       </section>
     </header>
     <main class="">
-      <section id="place-made-in" class="mt-[100px] mb-[350px] relative">
-        <article class="h-[600px]">
+      <section
+        id="place-made-in"
+        class="mt-[100px] mb-16 sm:mb-[350px] relative"
+      >
+        <article class="sm:h-[600px]">
           <img
             class="absolute z-[-1] h-[600px] w-[100%] object-cover"
             src="img/skate-riding.jpg"
@@ -210,7 +238,7 @@
           </figure>
         </article>
         <article
-          class="shadow-2xl w-[70%] h-[400px] absolute top-[490px] right-[14%] left-[14%] bg-[white] flex items-center justify-around"
+          class="shadow-2xl sm:w-[70%] h-[400px] sm:absolute top-[490px] right-[14%] left-[14%] bg-[white] flex items-center justify-around"
         >
           <figure id="the-pic" class="w-[40%] h-[97.4%]">
             <img
@@ -264,7 +292,7 @@
           </p>
         </figure>
         <img
-          class="absolute -translate-x-1/2 left-1/2"
+          class="absolute -translate-x-1/2 left-1/2 opacity-[0.6] lg:opacity-[0.8] xl:opacity-100"
           src="img/big-shoe-2.png"
           alt=""
         />
