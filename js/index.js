@@ -4,48 +4,44 @@ let myList = false;
 
 function openCloseNav() {
   if (myList == false) {
-    myNav.style.display = "flex";
+    myNav.style.height = "auto";
+    myNav.style.paddingTop = '3rem';
+    myNav.style.paddingBottom = '3rem';
     myList = true;
   } else if (myList == true) {
-    myNav.style.display = "none";
+    myNav.style.height = "0";
+    myNav.style.paddingTop = "0";
+    myNav.style.paddingBottom = "0";
     myList = false;
   }
 }
 
+// Fetching items from shoeGallery json file
 
-// Add image to html with javascript
+let http = new XMLHttpRequest();
+http.open("get", "shoeGallery.json", true);
+http.send();
 
-// all images and their styles
-let images = [
-  "img/blue-shoe.png",
-  "img/yellow-shoe.png",
-  "img/black-shoe.png",
-  "img/red-shoe.png",
-  "img/white-shoe.png",
-];
-const shoeStyle = "w-[200px] png-shadow group-hover:-scale-x-100 transition-all";
+http.onload = function () {
+  if (this.readyState == 4 && this.status == 200) {
+    let shoeGallery = JSON.parse(this.responseText);
 
-// For blue White Shoe
-let blueShoe = document.getElementById('blue-shoe');
-blueShoe.src = images[0];
-blueShoe.className = shoeStyle;
+    let output = "";
 
-// For yellow gray shoe
-let yellowShoe = document.getElementById("yellow-shoe");
-yellowShoe.src = images[1];
-yellowShoe.className = shoeStyle;
+    for (let items of shoeGallery) {
+      output += `
+              <figure id="blue-shoe" class="group">
+                <img
+                  class="w-[200px] png-shadow group-hover:-scale-x-100 transition-all"
+                  src="${items.image}"
+                  alt=""
+                />
+                <p class="font-[700] text-[18px] leading-5 pl-[15px]">${items.shoeTittle}<br /><samp class="text-[#8d171b]">${items.price}</samp>
+                </p>
+              </figure>
+              `;
+    }
 
-// For black white shoe 
-let blackShoe = document.getElementById("black-shoe");
-blackShoe.src = images[2];
-blackShoe.className = shoeStyle;
-
-// For red white shoe 
-let redShoe = document.getElementById("red-shoe");
-redShoe.src = images[3];
-redShoe.className = shoeStyle;
-
-// For white white shoe 
-let whiteShoe = document.getElementById("white-shoe");
-whiteShoe.src = images[4];
-whiteShoe.className = shoeStyle;
+    document.querySelector(".all__shoes").innerHTML = output;
+  }
+};
