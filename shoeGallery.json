@@ -1,0 +1,27 @@
+[
+    {
+        "image": "img/blue-shoe.png",
+        "shoeTittle": "Blue White",
+        "price": "€54.95"
+    },
+    {
+        "image": "img/yellow-shoe.png",
+        "shoeTittle": "Yellow Gray",
+        "price": "€54.95"
+    },
+    {
+        "image": "img/black-shoe.png",
+        "shoeTittle": "Black white",
+        "price": "€54.95"
+    },
+    {
+        "image": "img/red-shoe.png",
+        "shoeTittle": "Burgundy",
+        "price": "€54.95"
+    },
+    {
+        "image": "img/white-shoe.png",
+        "shoeTittle": "Light Gray Gold",
+        "price": "€54.95"
+    }
+]

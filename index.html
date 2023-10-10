@@ -22,18 +22,21 @@
         <article
           class="flex flex-row-reverse items-center lg:flex-row gap-2 sm:gap-6"
         >
-          <div
-            id="bar-open"
-            class="lg:hover:bg-[#8d171b] active:bg-[#8d171b] group rounded-full transition-all p-1"
+        <input type="checkbox" class="hidden" id="check" />
+          <label
+          for="check"
+            id="nav-icons"
+            class="lg:hover:bg-[#8d171b] active:bg-[#8d171b] group rounded-full transition-all p-1 lg:hidden"
             onclick="openCloseNav()"
           >
             <svg
+              id="nav-normal"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="2.5"
               stroke="currentColor"
-              class="w-6 h-6 lg:hidden lg:group-hover:text-white"
+              class="w-6 h-6 lg:group-hover:text-white"
             >
               <path
                 stroke-linecap="round"
@@ -41,10 +44,24 @@
                 d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
               />
             </svg>
-          </div>
+            <svg
+            id="nav-closed"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            stroke-width="2.5"
+            fill="currentColor"
+            class="w-6 h-6 hidden"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          </label>
           <nav
             id="for-phone"
-            class="hidden flex-col items-center gap-3 sm:gap-9 text-sm font-[600] lg:hidden fixed top-[56.9px] z-[9999] w-[60%] sm:w-[70%] bg-[#8d171b] py-4 rounded-3xl transition-all"
+            class="flex flex-col items-center gap-3 sm:gap-9 text-sm font-[600] lg:hidden fixed top-[56.9px] z-[9999] w-[60%] sm:w-[70%] h-0 bg-[#8d171b] py-0 rounded-3xl transition-all overflow-hidden"
           >
             <a id="phone-link" onclick="openCloseNav(this)" href="" class="px-[30%] text-[#8d171b] bg-white"
               >CLOTHING</a
@@ -173,56 +190,8 @@
             />
           </svg>
         </div>
-        <figure id="blue-shoe" class="group hidden lg:block">
-          <img
-            class="w-[200px] png-shadow group-hover:-scale-x-100 transition-all"
-            src="img/blue-shoe.png"
-            alt=""
-          />
-          <p class="font-[700] text-[18px] leading-5 pl-[15px]">
-            Blue White<br /><samp class="text-[#8d171b]">€54.95</samp>
-          </p>
-        </figure>
-        <figure id="yellow-shoe" class="group hidden md:block">
-          <img
-            class="w-[200px] png-shadow group-hover:-scale-x-100 transition-all"
-            src="img/yellow-shoe.png"
-            alt=""
-          />
-          <p class="font-[700] text-[18px] leading-5 pl-[15px]">
-            Blue White<br /><samp class="text-[#8d171b]">€54.95</samp>
-          </p>
-        </figure>
-        <figure id="black-shoe" class="group hidden sm:block">
-          <img
-            class="w-[200px] png-shadow group-hover:-scale-x-100 transition-all"
-            src="img/black-shoe.png"
-            alt=""
-          />
-          <p class="font-[700] text-[18px] leading-5 pl-[15px]">
-            Blue White<br /><samp class="text-[#8d171b]">€54.95</samp>
-          </p>
-        </figure>
-        <figure id="red-shoe" class="group">
-          <img
-            class="w-[200px] png-shadow group-hover:-scale-x-100 transition-all"
-            src="img/red-shoe.png"
-            alt=""
-          />
-          <p class="font-[700] text-[18px] leading-5 pl-[15px]">
-            Burgundy<br /><samp class="text-[#8d171b]">€54.95</samp>
-          </p>
-        </figure>
-        <figure id="white-shoe" class="group">
-          <img
-            class="w-[200px] png-shadow group-hover:-scale-x-100 transition-all"
-            src="img/white-shoe.png"
-            alt=""
-          />
-          <p class="font-[700] text-[18px] leading-5 pl-[15px]">
-            Light Grey Black<br /><samp class="text-[#8d171b]">€54.95</samp>
-          </p>
-        </figure>
+        <!-- Shoe container -->
+        <article class="flex justify-evenly all__shoes"></article>
         <div class="hover:bg-[#a2a2a27a] rounded-full transition-all">
           <svg
             xmlns="http://www.w3.org/2000/svg"
